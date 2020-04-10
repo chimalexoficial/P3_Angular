@@ -1,0 +1,30 @@
+<p>product works!</p>
+<li class="border list-unstyled">
+    <div class="row" *ngFor="let p of products">
+      <div class="col-1">
+        <input type="checkbox">
+      </div>
+      <div class="media col">
+        <img class="mr-3" src="http://picsum.photos/id/{{p.uid}}/100/100" alt="Generic placeholder image">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">{{p.nombre}}</h5>
+          <p>Precio (MXN): ${{p.precio}}</p>
+          <p>marca: {{p.marca}}</p>
+          <p>Descripción: {{p.descripcion}}</p>
+          <p>Existencia: {{p.existencia}}</p>
+        </div>
+        <div class="media-right col-2 mt-3">
+          <div class="row">
+            <a name="" id="" class="btn btn-primary" href="#" routerLink="./{{p.uid}}/edit" role="button"><i class="fas fa-edit"></i></a>
+          </div>
+          <div class="row mt-3">
+            <a name="" id="" class="btn btn-primary" href="#" routerLink="./{{p.uid}}" role="button"><i class="fas fa-search"></i></a>
+          </div>
+          <div class="row mt-3">
+            <a name="" id="" class="btn btn-danger" href="#" role="button">
+              <i class="fas fa-trash"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
